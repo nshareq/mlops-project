@@ -1,0 +1,80 @@
+Metadata-Version: 2.1
+Name: mlops_modular_project
+Version: 0.1.0
+Summary: A modular MLOps Pipeline Project
+Home-page: https://github.com/nshareq/mlops-project
+Author: Naim Shareq
+Author-email: naimshareq@gmail.com
+Classifier: Development Status :: 3 - Beta
+Classifier: Intended Audience :: ML Engineers
+Classifier: Programming Language :: Python >= 3.8
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: scikit-learn
+Requires-Dist: seaborn
+Provides-Extra: dev
+Requires-Dist: pytest>=7.1.1; extra == "dev"
+Requires-Dist: pytest-cov>=2.12.1; extra == "dev"
+Requires-Dist: flake8>=3.9.0; extra == "dev"
+Requires-Dist: black>=22.3.0; extra == "dev"
+Requires-Dist: isort>=5.10.1; extra == "dev"
+Requires-Dist: mypy>=0.942; extra == "dev"
+
+# MWC-Module-3-Modular-Workflow-and-Project-Setup-Basics
+
+## Problem Statement:
+
+### Business Context:
+The project aims to develop a machine learning system that predicts individual income levels based on demographic and employment data.
+
+The prediction boundary is set at $50,000 annually (binary classification problem). The solution will help in understanding socio-economic factors affecting income levels.
+
+### Objectives:
+1. Enable data-driven decision-making for policymakers and financial institutions.
+2. Identify key socio-economic factors influencing income disparities.
+3. Support targeted intervention programs for economic development.
+
+## Key Stakeholders:
+- **Policy Makers**: For evidence-based policy development.
+- **Financial Institutions**: For risk assessment and product development.
+- **Social Services**: For resource allocation and program planning.
+- **Research Organizations**: For socio-economic studies.
+
+## Dataset Details:
+Let's visualize the data structure and features:
+
+```mermaid
+classDiagram
+class Features {
+    Demographic_Features Employment_Features Financial_Features Other_Features
+}
+Features --> Demographic_Features
+Features --> Employment_Features
+Features --> Financial_Features
+
+class Demographic_Features {
+    age: numeric
+    education: categorical
+    education-num: numeric
+    race: categorical
+    sex: categorical
+    country: categorical
+}
+
+class Employment_Features {
+    workclass: categorical
+    occupation: categorical
+    hours-per-week: numeric
+    relationship: categorical
+    marital-status: categorical
+}
+
+class Financial_Features {
+    fnlwgt: numeric
+    capital-gain: numeric
+    capital-loss: numeric
+}
