@@ -19,7 +19,7 @@ setup(
     url="https://github.com/nshareq/mlops-project",
     packages=find_packages(),
     classifiers=[
-        "Development Status :: 3 - Beta",
+        "Development Status :: Beta",
         "Intended Audience :: ML Engineers",
         "Programming Language :: Python >= 3.8",
         "Operating System :: OS Independent",
